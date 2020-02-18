@@ -11,6 +11,7 @@ mkdir prometheus
 tar xfz prometheus-$prometheus_version.linux-armv7.tar.gz -C prometheus --strip-components 1
 rm prometheus-$prometheus_version.linux-armv7.tar.gz
 cd prometheus/
+mv prometheus.yml prometheus-default.yml
 wget https://raw.githubusercontent.com/Tony-Mc/pi/master/prometheus/prometheus.yml
 
 iptables -A INPUT -i eth0 -p tcp -m tcp --dport 9090 -j ACCEPT
