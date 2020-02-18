@@ -20,3 +20,5 @@ wget -P /etc/systemd/system/ https://raw.githubusercontent.com/Tony-Mc/pi/master
 systemctl enable node_exporter
 
 systemctl start node_exporter
+
+systemctl status node_exporter
