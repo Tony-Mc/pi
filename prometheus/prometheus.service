@@ -1,0 +1,15 @@
+[Unit]
+Description=prometheus server
+After=network.target syslog.target
+
+[Service]
+WorkingDirectory=/opt/prometheus
+Type=simple
+ExecStart=/opt/prometheus/prometheus --log.level=error
+ExecReload=/bin/kill -HUP $MAINPID
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=prometheus
+
+[Install]
+WantedBy=multi-user.target

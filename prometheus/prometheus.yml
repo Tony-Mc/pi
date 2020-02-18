@@ -1,0 +1,15 @@
+global: # Default is every 1 minute.   
+   scrape_configs:  
+  # server prometheus listens on TCP/9090  
+  - job_name: 'prometheus'.  
+         # metrics_path defaults to "/metrics  
+         # scheme defaults to "http".  
+      static_configs:  
+        - targets: ['localhost:9090']
+ 
+  # Exporters: client servers  
+  - job_name: 'nodes'.  
+     scrape_interval: 1m # Override the default global interval for this job  
+     scrape_timeout: 10s # Override the default global timeout for this job  
+     static_configs:  
+     - targets: [' localhost:9100']
