@@ -30,4 +30,4 @@ global:
 
    - job_name: 'nodes'
      static_configs:
-     - targets: ['localhost:9101']
+     - targets: ['localhost:9100']
