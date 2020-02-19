@@ -16,3 +16,5 @@ iptables -A OUTPUT -o eth0 -p tcp -m tcp -m tcp --sport 3000 -m state --state RE
 systemctl enable grafana
 
 systemctl start grafana
+
+systemctl status grafana
