@@ -5,7 +5,7 @@ After=network.target syslog.target
 [Service]
 WorkingDirectory=/opt/node_exporter
 Type=simple
-ExecStart=/opt/node_exporter/node_exporter --log.level=error
+ExecStart=/opt/node_exporter/node_exporter --collector.textfile.directory=/opt/node_exporter/stats --log.level=error
 ExecReload=/bin/kill -HUP $MAINPID
 StandardOutput=syslog
 StandardError=syslog

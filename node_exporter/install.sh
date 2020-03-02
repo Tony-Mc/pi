@@ -8,6 +8,7 @@ cd /opt
 
 wget https://github.com/prometheus/node_exporter/releases/download/v$exporter_version/node_exporter-$exporter_version.linux-armv7.tar.gz
 mkdir node_exporter
+mkdir node_exporter/stats
 tar xfz node_exporter-$exporter_version.linux-armv7.tar.gz -C node_exporter --strip-components 1
 rm node_exporter-$exporter_version.linux-armv7.tar.gz
 cd node_exporter/
